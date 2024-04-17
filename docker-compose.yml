@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    volumes:
+      - open-webui-data:/app/backend/data
+      - ./config.yaml:/app/backend/data/litellm/config.yaml
+      - $HOME/.aws:$HOME/.aws:ro
+    ports:
+      - 3000:8080
+    environment:
+      - AWS_CONFIG_FILE=$HOME/.aws/config
+      - AWS_SHARED_CREDENTIALS_FILE=$HOME/.aws/credentials
+
+volumes:
+  open-webui-data:
