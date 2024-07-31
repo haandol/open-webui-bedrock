@@ -10,7 +10,7 @@ services:
     environment:
       - AWS_CONFIG_FILE=$HOME/.aws/config
       - AWS_SHARED_CREDENTIALS_FILE=$HOME/.aws/credentials
-      - PDF_EXTRACT_IMAGES=True
+      - PDF_EXTRACT_IMAGES=true
       - RAG_EMBEDDING_MODEL=snunlp/KR-SBERT-Medium-klueNLItriplet_PARpair-klueSTS
 
 volumes:
