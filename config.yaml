@@ -3,6 +3,7 @@ model_list:
     litellm_params:
       model: anthropic.claude-3-sonnet-20240229-v1:0
       aws_region_name: us-east-1
+      max_tokens: 4096
 
 litellm_settings:
   drop_params: True
